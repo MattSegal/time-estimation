@@ -8,5 +8,8 @@ export default defineConfig({
   site: 'https://mattsegal.github.io',
   base: '/time-estimation',
   outDir: './docs',
+  build: {
+    assets: 'astro'
+  },
   integrations: [react()]
 });
