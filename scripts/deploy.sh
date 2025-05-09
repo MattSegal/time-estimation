@@ -1,13 +1,10 @@
 #!/bin/bash
-# https://tinydrydock.com/
-# http://tinydrydock.com.s3-website-ap-southeast-2.amazonaws.com/
-# https://dash.cloudflare.com/4475bf3857373ac069c38303b1325c19/tinydrydock.com/dns/records
+# https://mattsegal.github.io/time-estimation/
 # Exit on error
 set -e
 
 # Configuration
-S3_BUCKET="tinydrydock.com"
-DIST_DIR="dist"
+DIST_DIR="docs"
 
 echo "🚀 Starting deployment process..."
 
@@ -22,12 +19,10 @@ if [ ! -d "$DIST_DIR" ]; then
     exit 1
 fi
 
-# # Upload to S3
-echo "📤 Uploading to S3 bucket: $S3_BUCKET"
-aws s3 sync $DIST_DIR "s3://$S3_BUCKET" --delete
-
-# Invalidate CloudFront cache if you're using CloudFront (commented out by default)
-# echo "🔄 Invalidating CloudFront cache..."
-# aws cloudfront create-invalidation --distribution-id YOUR_DISTRIBUTION_ID --paths "/*"
+# Push to GitHub Pages
+echo "📤 Pushing to GitHub Pages"
+git add .
+git commit -m "Deploying to GitHub Pages"
+git push
 
 echo "✅ Deployment completed successfully!" 
