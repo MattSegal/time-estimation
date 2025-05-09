@@ -1,6 +1,16 @@
 # Time Estimator
 
-https://thesearesystems.substack.com/p/task-estimation-conquering-hofstadters
+https://mattsegal.github.io/time-estimation/
+
+Based on time estimation probability fromula proposed by Jacob Bayless in [Task estimation: Conquering Hofstadter's Law
+](https://thesearesystems.substack.com/p/task-estimation-conquering-hofstadters)
+
+```
+Given a developer's estimated time m
+
+P(t|m) = sqrt( exp( -1 * ( ln(t) - ln(m) )^2 ) / ( 2 * pi * t^2 ) )
+
+```
 
 ## Commands
 
