@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<meta property="og:image" content="https://tinydrydock.com/social.png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:title" content="The Tiny Dry Dock" />
+		<meta property="og:description" content="Model Marine Repairs" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://tinydrydock.com" />
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:image" content="https://tinydrydock.com/social.png" />
+		<meta name="twitter:title" content="The Tiny Dry Dock" />
+		<meta name="twitter:description" content="Model Marine Repairs" />
+		<title>The Tiny Dry Dock</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+	:root {
+	/* Primary Colors */
+	--navy-dark: #0A1F44;     /* Deep navy for main text and key elements */
+	--navy-medium: #1C3D5A;   /* Secondary navy for interactive elements */
+	--navy-light: #345980;    /* Lighter navy for hover states */
+
+	/* Neutral Colors */
+	--parchment: #FAF6F0;     /* Aged paper background color */
+	--parchment-dark: #E6D5BC; /* Slightly darker parchment for contrast */
+	--white: #F9F9F9;         /* Off-white for sails and highlights */
+
+	/* Accent Colors */
+	--copper: #B87333;        /* Copper/brass accents */
+	--copper-light: #D4915D;  /* Lighter copper for hover states */
+	--wood: #8B4513;          /* Rich wood tone */
+	--wood-light: #A65D2E;    /* Lighter wood tone for contrast */
+
+	/* Utility Colors */
+	--text-primary: #0A1F44;  /* Main text color */
+	--text-secondary: #345980; /* Secondary text color */
+	}
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		font-family: 'Crimson Text', serif;
+		background-color: var(--parchment);
+	}
+</style>
